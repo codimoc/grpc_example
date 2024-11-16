@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package unary;
+
+service Unary{
+ rpc Respond(Message) returns (Response) {}
+}
+
+message Message{
+ string message = 1;
+}
+
+message Response{
+ string message = 1;
+ bool received = 2;
+}
